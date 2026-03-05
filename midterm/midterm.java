@@ -4,7 +4,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         
-        // may need to change inital statement
         System.out.println("This system will allow you to manage a class list grades.");
 
         System.out.println("Your student Will wants to know his average, enter his assignment grades.");
