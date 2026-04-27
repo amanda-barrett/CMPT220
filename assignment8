@@ -1,0 +1,68 @@
+/*
+Remember that stacks/queues/linkedlists all work super similarly to arraylists, so i bet you $10 you could reference earlier HW if you get stuck....
+
+1. Take the stack I created and find the maximum and minimum value
+2. Find out how many elements were in the stack
+
+3. Find the middle value of the linkedlist I created
+
+4. Implement a real life example of any of the structures and do at least 3 operations to it
+*/
+
+import java.util.Stack;
+
+import java.util.LinkedList;
+
+import java.util.Queue;
+
+import java.util.Collections;
+
+public class App {
+    public static void main(String[] args) {
+        Stack<Integer> stax = new Stack<>();
+        
+        stax.push(70);
+        stax.push(34);
+        stax.push(807);
+        stax.push(61);
+        stax.push(28);
+        stax.push(563);
+        stax.push(492);
+        stax.push(386);
+        
+//question 1
+        Collections.sort(stax);
+        System.out.println("The maximum is: " + stax.peek());
+        System.out.println("The mimumum is: " + stax.get(0));
+        
+//question 2
+        System.out.println("The number of elements is: " + stax.size());
+
+        
+        LinkedList<Integer> linky = new LinkedList<>();
+
+        linky.add(10);
+        linky.add(20);
+        linky.add(30);
+        linky.add(40);
+        linky.add(50);
+
+//question 3
+        System.out.println("The middle value is: " + linky.get(linky.size()/2));
+
+//question 4
+        Queue<String> playlist = new LinkedList();
+        //adding songs to the playlist
+        playlist.add("Don't Stop the Music");
+        playlist.add("Boyfriend");
+        playlist.add("Uptown Funk");
+        playlist.add("Ain't It Fun");
+        
+        //playing the first 2 songs (peeking #1, removing #1, peeking #2)
+        System.out.println(playlist.peek());
+        playlist.remove();
+        System.out.println(playlist.peek());
+
+    }
+}
+
